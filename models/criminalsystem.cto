@@ -30,9 +30,10 @@ participant Criminals identified by Cnic {
 }
 participant MinistryPerson identified by batchId {
   o String batchId
+  o Category MinistryCategory
 }
 enum Category {
-  o PoliceStation
+  o PoliceStation 
   o Airport
   o PakistanArmedForce
   o PakistanAirForce
@@ -76,6 +77,7 @@ enum criminalAssets {
 transaction CriminalFreedom {
   o String CriminalId
   o String MinistryPersonId
+  o String MinistryCategory
   // o String newValue
 }
 
